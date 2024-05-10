@@ -1,9 +1,9 @@
 import cv2 as cv
 import numpy as np
 
-img1 = cv.imread('leo.jpg')[100:550,400:700]
+img1 = cv.imread('cat.jpg')[100:550,400:700]
 gray1 = cv.cvtColor(img1, cv.COLOR_BGR2GRAY)
-img2 = cv.imread('leo2.jpg')
+img2 = cv.imread('cat2.jpg')
 gray2 = cv.cvtColor(img2, cv.COLOR_BGR2GRAY)
 
 sift = cv.SIFT_create()
