@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-import tensorflow.keras.datasets as ds 
+import tensorflow.keras.datasets as ds
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
@@ -18,7 +18,7 @@ mlp=Sequential()
 mlp.add(Dense(units=512,activation='tanh',input_shape=(784,)))
 mlp.add(Dense(units=10,activation='softmax'))
 
-mlp.compile(loss='MSE', optimizer=Adam(learning_rate=0.01),
+mlp.compile(loss='MSE', optimizer=Adam(learning_rate=0.001),
 metrics=['accuracy'])
 mlp.fit(x_train,y_train,batch_size=128,epochs=50,validation_data=(x_test,y_test),verbose=2)
 
