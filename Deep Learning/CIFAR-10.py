@@ -37,7 +37,7 @@ lr_scheduler = ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, min
 dmlp.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=0.0005), metrics=['accuracy'])
 
 
-hist = dmlp.fit(x_train, y_train, batch_size=128, epochs=100, validation_data=(x_test, y_test), verbose=2, callbacks=[lr_scheduler])
+hist = dmlp.fit(x_train, y_train, batch_size=128, epochs=70, validation_data=(x_test, y_test), verbose=2, callbacks=[lr_scheduler])
 
 
 accuracy = dmlp.evaluate(x_test, y_test, verbose=0)[1] * 100
